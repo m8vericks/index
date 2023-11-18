@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>borwailoey</title>
+  </head>
+  <body>
+    <div id="box">
+      <button id="plus">+</button>
+      <button id="minus">-</button>
+    </div>
+
+    <script>
+      let a = 0;
+      let new_el = document.createElement("div");
+      new_el.innerText = a;
+
+      let btn = document.getElementById("plus");
+      btn.addEventListener("click", function () {
+        a = a + 1;
+        new_el.innerHTML = a;
+
+        if (a >= 10) {
+            new_el.style.backgroundColor = "green"
+        
+        }
+        
+        else if(a>=0){
+            new_el.style.backgroundColor = "white"
+        }
+
+      });
+
+      let btn1 = document.getElementById("minus");
+      btn1.addEventListener("click", function () {
+        a = a - 1;
+        new_el.innerHTML = a;
+
+        if (a < 0) {
+            new_el.style.backgroundColor = "yellow"
+        
+        }
+        else if(a<10){
+            new_el.style.backgroundColor = "white"
+        }
+      });
+
+      let box = document.getElementById("box");
+      box.appendChild(new_el);
+    </script>
+  </body>
+</html>
